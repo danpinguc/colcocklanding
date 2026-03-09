@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Colcock Landing!</title>
+  <style>
+    body {
+      background-color: #c0c0c0;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000000;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .page-border {
+      border: 3px ridge #808080;
+      padding: 20px;
+      background-color: #c0c0c0;
+    }
+
+    hr {
+      border: none;
+      height: 4px;
+      background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+    }
+
+    .wave-container {
+      text-align: center;
+      padding: 30px 0;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wave-letter {
+      display: inline-block;
+      font-size: 64px;
+      font-weight: bold;
+      font-family: 'Comic Sans MS', 'Times New Roman', cursive;
+    }
+
+    .landing-text {
+      text-align: center;
+      font-size: 28px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #000080;
+    }
+
+    .center-content {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .blink {
+      animation: blinker 1s step-start infinite;
+      color: #ff0000;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    @keyframes blinker {
+      50% { opacity: 0; }
+    }
+
+    .visitor-counter {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .counter-digits {
+      display: inline-flex;
+      gap: 2px;
+      margin-top: 5px;
+    }
+
+    .counter-digit {
+      background: #000000;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border: 2px inset #808080;
+    }
+
+    .guestbook-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 20px;
+      background: #c0c0c0;
+      border: 3px outset #ffffff;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+      color: #000000;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .guestbook-btn:active {
+      border-style: inset;
+    }
+
+    .marquee-bar {
+      background: #000080;
+      color: #ffff00;
+      padding: 6px 0;
+      font-size: 16px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0%   { transform: translateX(100vw); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .construction {
+      text-align: center;
+      margin: 15px 0;
+      font-size: 18px;
+      color: #808000;
+    }
+
+    .hard-hat {
+      font-size: 40px;
+    }
+
+    .email-link {
+      color: #0000ff;
+      font-size: 16px;
+      cursor: default;
+    }
+
+    #pixel-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+      image-rendering: pixelated;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: crisp-edges;
+    }
+
+    .netscape-badge {
+      text-align: center;
+      margin: 15px 0;
+      padding: 10px;
+      border: 2px ridge #808080;
+      display: inline-block;
+      font-size: 13px;
+      background: #e0e0e0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #808080;
+      margin-top: 10px;
+    }
+
+    .table-fancy {
+      margin: 0 auto;
+      border: 3px ridge #808080;
+      background: #ffffff;
+      padding: 15px 40px;
+    }
+
+    .starfield {
+      color: #ffff00;
+      font-size: 12px;
+      letter-spacing: 4px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="pixel-overlay"></canvas>
+  <div class="page-border">
+
+    <div class="marquee-bar">
+      <span class="marquee-text">*** Welcome to Colcock Landing *** Your #1 destination on the World Wide Web *** Best viewed with Netscape Navigator 3.0 at 800x600 ***</span>
+    </div>
+
+    <br>
+
+    <div class="wave-container">
+      <span id="wave-text"></span>
+    </div>
+
+    <div class="landing-text">Landing</div>
+
+    <hr>
+
+    <div class="center-content">
+      <span class="blink">~ UNDER CONSTRUCTION ~</span>
+    </div>
+
+    <div class="construction">
+      <span class="hard-hat">&#9888;&#65039;</span>
+      Pardon our dust! This site is being built!
+      <span class="hard-hat">&#9888;&#65039;</span>
+    </div>
+
+    <hr>
+
+    <div class="center-content">
+      <div class="table-fancy">
+        <p class="starfield">* * * * * * * * *</p>
+        <br>
+        <b>This web page is currently under development.</b><br>
+        <b>Please check back soon for updates!</b>
+        <br><br>
+        <button class="guestbook-btn" onclick="alert('Guestbook coming soon!')">Sign Our Guestbook!</button>
+        <br><br>
+        <p class="starfield">* * * * * * * * *</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="visitor-counter">
+      <b>You are visitor number:</b><br>
+      <div class="counter-digits">
+        <span class="counter-digit">0</span>
+        <span class="counter-digit">0</span>
+        <span class="counter-digit">0</span>
+        <span class="counter-digit">0</span>
+        <span class="counter-digit">4</span>
+        <span class="counter-digit">7</span>
+      </div>
+    </div>
+
+    <div class="center-content">
+      <div class="netscape-badge">
+        &#9978; Best viewed with <b>Netscape Navigator</b><br>
+        <span style="font-size:11px;">Download it FREE at netscape.com!</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="center-content">
+      <span class="email-link">&#9993; Email the Webmaster</span>
+    </div>
+
+    <br>
+
+    <div class="footer">
+      &copy; 1997 Colcock Landing. All rights reserved.<br>
+      This site is best viewed at 800x600 resolution.
+    </div>
+
+  </div>
+
+  <script>
+    const text = "COLCOCK";
+    const colors = ["#ff0000", "#ff4400", "#ff8800", "#ffcc00", "#ffff00", "#ccff00", "#00ff00"];
+    const container = document.getElementById("wave-text");
+
+    // Create spans for each letter
+    const letters = [];
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = text[i];
+      span.className = "wave-letter";
+      span.style.color = colors[i % colors.length];
+      container.appendChild(span);
+      letters.push(span);
+    }
+
+    // Animate the wave
+    let tick = 0;
+    function animate() {
+      for (let i = 0; i < letters.length; i++) {
+        const offset = Math.sin((tick * 0.06) + (i * 0.8)) * 20;
+        letters[i].style.transform = `translateY(${offset}px)`;
+      }
+      tick++;
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Pixelated scanline overlay
+    const overlay = document.getElementById('pixel-overlay');
+    const ctx = overlay.getContext('2d');
+
+    function drawPixelOverlay() {
+      overlay.width = window.innerWidth;
+      overlay.height = window.innerHeight;
+
+      // Horizontal scanlines
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+      for (let y = 0; y < overlay.height; y += 3) {
+        ctx.fillRect(0, y, overlay.width, 1);
+      }
+
+      // Pixel grid
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+      for (let x = 0; x < overlay.width; x += 4) {
+        ctx.fillRect(x, 0, 1, overlay.height);
+      }
+      for (let y = 0; y < overlay.height; y += 4) {
+        ctx.fillRect(0, y, overlay.width, 1);
+      }
+
+      // CRT vignette
+      const grd = ctx.createRadialGradient(
+        overlay.width / 2, overlay.height / 2, overlay.height * 0.3,
+        overlay.width / 2, overlay.height / 2, overlay.height * 0.9
+      );
+      grd.addColorStop(0, 'rgba(0,0,0,0)');
+      grd.addColorStop(1, 'rgba(0,0,0,0.25)');
+      ctx.fillStyle = grd;
+      ctx.fillRect(0, 0, overlay.width, overlay.height);
+
+      // RGB sub-pixel noise
+      const imageData = ctx.getImageData(0, 0, overlay.width, overlay.height);
+      const data = imageData.data;
+      for (let i = 0; i < data.length; i += 16) {
+        const noise = Math.random() * 12;
+        data[i] += noise;
+        data[i + 3] = Math.min(255, data[i + 3] + noise * 0.5);
+      }
+      ctx.putImageData(imageData, 0, 0);
+    }
+
+    drawPixelOverlay();
+    window.addEventListener('resize', drawPixelOverlay);
+  </script>
+</body>
+</html>
